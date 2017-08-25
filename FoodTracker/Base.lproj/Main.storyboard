@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,7 +32,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hdP-rW-XUL">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hdP-rW-XUL">
                                         <rect key="frame" x="0.0" y="28.333333333333329" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -52,26 +53,46 @@
                                     <constraint firstAttribute="trailing" secondItem="hdP-rW-XUL" secondAttribute="trailing" id="KaZ-Lt-Z15"/>
                                 </constraints>
                             </stackView>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" highlightedImage="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="XhH-fr-J87">
+                                <rect key="frame" x="20" y="134" width="374" height="322"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="XhH-fr-J87" secondAttribute="height" multiplier="187:161" id="6Nn-Ut-bsE"/>
+                                    <constraint firstAttribute="height" constant="322" id="RQZ-xP-3UK"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="M57-1H-BDM" appends="YES" id="lAZ-bd-HRE"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="hZ8-Ds-N3k" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="2NX-Rx-gth"/>
+                            <constraint firstItem="XhH-fr-J87" firstAttribute="top" secondItem="MgM-SF-Kan" secondAttribute="bottom" constant="-2.3333333333333712" id="3Tu-2n-Q49"/>
                             <constraint firstItem="hZ8-Ds-N3k" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="8nd-Pf-uOW"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="hZ8-Ds-N3k" secondAttribute="trailing" id="awu-xq-sda"/>
-                            <constraint firstItem="hZ8-Ds-N3k" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="eFB-81-En2"/>
-                            <constraint firstItem="hZ8-Ds-N3k" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="goS-MF-and"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="hZ8-Ds-N3k" secondAttribute="trailing" id="r4l-6q-XBn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hZ8-Ds-N3k" secondAttribute="trailing" id="OtJ-se-IUG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XhH-fr-J87" secondAttribute="trailing" id="hjM-Ga-Ju8"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="XhH-fr-J87" secondAttribute="leading" id="kDf-rp-ght"/>
                             <constraint firstItem="hZ8-Ds-N3k" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="rCe-cr-BYM"/>
-                            <constraint firstItem="hZ8-Ds-N3k" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="xQw-Am-Hkr"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="mealNameLabel" destination="Jc4-5R-C6g" id="Mt4-A1-USk"/>
                         <outlet property="nameTextField" destination="hdP-rW-XUL" id="Rbb-TA-g5h"/>
+                        <outlet property="photoImageView" destination="XhH-fr-J87" id="1An-me-bXx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="M57-1H-BDM">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="vpN-iw-ObX"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="24.800000000000001" y="36.431784107946029"/>
+            <point key="canvasLocation" x="-251" y="-171"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="defaultPhoto" width="213" height="160"/>
+    </resources>
 </document>
