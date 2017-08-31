@@ -12,7 +12,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
 
    @IBOutlet weak var ratingControl: RatingControl!
     @IBOutlet weak var photoImageView: UIImageView!
-    @IBOutlet weak var mealNameLabel: UILabel!
+   // @IBOutlet weak var mealNameLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
    
     /*@IBAction func setDefaultLabelText(_ sender: UIButton) {
@@ -34,7 +34,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         return true
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
-        mealNameLabel.text = textField.text
+       // mealNameLabel.text = textField.text
     }
 
    

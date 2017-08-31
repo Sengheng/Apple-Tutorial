@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Txv-qJ-bbF" id="PBq-Ii-5fj">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="89.666666666666671"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imageView:85N-JE-MFT:image" translatesAutoresizingMaskIntoConstraints="NO" id="85N-JE-MFT">
@@ -74,28 +74,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hZ8-Ds-N3k">
-                                <rect key="frame" x="20" y="39.999999999999993" width="374" height="58.333333333333321"/>
+                                <rect key="frame" x="20" y="40" width="374" height="30"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yKf-VG-9oy">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.333333333333336"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jc4-5R-C6g">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="20.333333333333336"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="Jc4-5R-C6g" secondAttribute="trailing" id="BJp-bf-U3j"/>
-                                            <constraint firstItem="Jc4-5R-C6g" firstAttribute="top" secondItem="yKf-VG-9oy" secondAttribute="top" id="Kfd-33-6Rr"/>
-                                            <constraint firstItem="Jc4-5R-C6g" firstAttribute="centerX" secondItem="yKf-VG-9oy" secondAttribute="centerX" id="e1x-uv-D3Z"/>
-                                            <constraint firstItem="Jc4-5R-C6g" firstAttribute="leading" secondItem="yKf-VG-9oy" secondAttribute="leading" id="m5R-FG-DBZ"/>
-                                            <constraint firstAttribute="bottom" secondItem="Jc4-5R-C6g" secondAttribute="bottom" id="uNT-k2-Gf8"/>
-                                        </constraints>
-                                    </stackView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hdP-rW-XUL">
-                                        <rect key="frame" x="0.0" y="28.333333333333329" width="374" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -103,11 +85,10 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="hdP-rW-XUL" secondAttribute="trailing" id="KaZ-Lt-Z15"/>
-                                    <constraint firstItem="yKf-VG-9oy" firstAttribute="centerX" secondItem="hZ8-Ds-N3k" secondAttribute="centerX" id="XOp-7E-4gd"/>
                                 </constraints>
                             </stackView>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" highlightedImage="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="XhH-fr-J87">
-                                <rect key="frame" x="20" y="106" width="374" height="322"/>
+                                <rect key="frame" x="20" y="77.666666666666686" width="374" height="322"/>
                                 <accessibility key="accessibilityConfiguration" label="stack"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -143,7 +124,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="mealNameLabel" destination="Jc4-5R-C6g" id="Mt4-A1-USk"/>
                         <outlet property="nameTextField" destination="hdP-rW-XUL" id="Rbb-TA-g5h"/>
                         <outlet property="photoImageView" destination="XhH-fr-J87" id="1An-me-bXx"/>
                         <outlet property="ratingControl" destination="rvI-MC-zjR" id="0pJ-4v-aBj"/>
