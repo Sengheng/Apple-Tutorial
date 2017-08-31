@@ -10,17 +10,17 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-   
+   @IBOutlet weak var ratingControl: RatingControl!
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var mealNameLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
    
-    @IBAction func setDefaultLabelText(_ sender: UIButton) {
+    /*@IBAction func setDefaultLabelText(_ sender: UIButton) {
        print("text default click")
         mealNameLabel.text = "Default Text"
         nameTextField.text = ""
         
-    }
+    }*/
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -38,6 +38,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     }
 
    
+    
     @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
         // Hide the keyboard.
         
